@@ -1,4 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes to self</title><link>https://example.com/</link><description>Notes to myself</description><atom:link href="https://example.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:smt.moji@gmail.com"&gt;Mojtaba Tabatabaeiporu&lt;/a&gt; </copyright><lastBuildDate>Sat, 26 Oct 2019 17:55:10 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>First Note</title><link>https://example.com/posts/firt-note/</link><dc:creator>Mojtaba Tabatabaeiporu</dc:creator><description>&lt;div&gt;&lt;h2&gt;First Note&lt;/h2&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes to self</title><link>https://example.com/</link><description>Notes to myself</description><atom:link href="https://example.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:smt.moji@gmail.com"&gt;Mojtaba Tabatabaeiporu&lt;/a&gt; </copyright><lastBuildDate>Sat, 14 Mar 2020 17:13:09 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Setting up a Dev environment on Windowns</title><link>https://example.com/posts/Setting%20up%20a%20Dev%20environment%20on%20Windowns/</link><dc:creator>Mojtaba Tabatabaeiporu</dc:creator><description>&lt;div&gt;&lt;h2&gt;Setting up a data science dev environment on Windows:&lt;/h2&gt;
+&lt;p&gt;I recently switched job and I moved from developing on macOS to windows. Here is what I settled down eventually on.&lt;/p&gt;
+&lt;h3&gt;Package Manager&lt;/h3&gt;
+&lt;p&gt;To install software on windows, the usuall way is to search and download the installer, optionally setting the path and related environment variable. Package managers makes these steps easier (&lt;a href="https://hackernoon.com/why-windows-needs-a-package-manager-3868cffdec24"&gt;more here&lt;/a&gt;). It is equivalent to brew on mac or apt/dnf/pacman in Lunix based distros. There are many third-party package managers for windows including Scoop, Chocolatey, Ninite, OneGet. I started using Chocolatey. &lt;a href="https://chocolatey.org/docs/installation"&gt;Here&lt;/a&gt; you can see the guide for installing chocolately.&lt;/p&gt;
+&lt;h3&gt;Terminal Emulator&lt;/h3&gt;
+&lt;p&gt;A terminal emulator is a program that emulates the functionality of a terminal for windows. &lt;a href="https://cmder.net/"&gt;Cmder&lt;/a&gt; is one of the most popular ones. You can install it with running:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;choco install cmder&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;In powershell.&lt;/p&gt;
+&lt;p&gt;It is protable and comes in with a slightly bigger version of &lt;a href="https://gitforwindows.org/"&gt;git-for-windows&lt;/a&gt;. There is a lot of configuration options.&lt;/p&gt;
+&lt;h3&gt;Python&lt;/h3&gt;
+&lt;p&gt;For python version management and virtual environment managements on linux, I use &lt;a href="https://github.com/pyenv/pyenv"&gt;pyenv&lt;/a&gt;. On windows, I decided to go with Conda which is a package, dependency, and environment management for different lanaguages inclduing python. In particular. I use Miniconda which only comes with the package management system and not a bundle of pre-installed packages like Anaconda. To install miniconda for python 3, run the following:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;choco install miniconda3&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://deeplearning.lipingyang.org/2018/12/23/anaconda-vs-miniconda-vs-virtualenv/"&gt;Here&lt;/a&gt; you can read more on Anaconda vs. Miniconda vs. virtualenv.&lt;/p&gt;
+&lt;h3&gt;Cmder integration&lt;/h3&gt;
+&lt;p&gt;You can setup a task in cmder which would activate the base conda environment when you create a new console. Assume your miniconda is installed in &lt;code&gt;C:\tools\miniconda3&lt;/code&gt;. On cmder, setup tasks, startup, tasks, add a new predefines tasks and configure it like this:
+&lt;img alt="cmder conda setup" src="https://example.com/posts/Setting%20up%20a%20Dev%20environment%20on%20Windowns/figs/cmder.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;In the commands you need to put:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cmd /k ""%ConEmuDir%\..\init.bat"" &amp;amp; C:\tools\miniconda3\Scripts\activate.bat C:\tools\miniconda3&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;VSCode integrated terminal&lt;/h3&gt;
+&lt;p&gt;If you use Vscode as your editor, you can configure it to use cmder in integrated shell:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;"terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",&lt;/span&gt;
+&lt;span class="err"&gt;"terminal.integrated.env.windows": {&lt;/span&gt;
+&lt;span class="err"&gt;    "CMDER_ROOT": "C:\\tools\\Cmder"&lt;/span&gt;
+&lt;span class="err"&gt;    },&lt;/span&gt;
+&lt;span class="err"&gt;"terminal.integrated.shellArgs.windows": [&lt;/span&gt;
+&lt;span class="err"&gt;    "/k",&lt;/span&gt;
+&lt;span class="err"&gt;    "C:\\tools\\Cmder\\vendor\\init.bat &amp;amp;",&lt;/span&gt;
+&lt;span class="err"&gt;    "C:\\tools\\miniconda3\\Scripts\\activate.bat",&lt;/span&gt;
+&lt;span class="err"&gt;    "C:\\tools\\miniconda3",&lt;/span&gt;
+&lt;span class="err"&gt;],&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;h3&gt;Powerline for cmder&lt;/h3&gt;
+&lt;p&gt;Finally, if you want to add powerline to to customize your prompt, look &lt;a href="https://github.com/AmrEldib/cmder-powerline-prompt"&gt;here.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="cmder conda setup" src="https://example.com/posts/Setting%20up%20a%20Dev%20environment%20on%20Windowns/figs/cmder_2.png"&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>https://example.com/posts/Setting%20up%20a%20Dev%20environment%20on%20Windowns/</guid><pubDate>Mon, 11 Nov 2019 11:56:43 GMT</pubDate></item><item><title>First Note</title><link>https://example.com/posts/firt-note/</link><dc:creator>Mojtaba Tabatabaeiporu</dc:creator><description>&lt;div&gt;&lt;h2&gt;First Note&lt;/h2&gt;
 &lt;p&gt;These are series of notes that I mainly write for myself, so I can refer to them later. They can be very unstructured. I just put them here since they might be useful for other selves!&lt;/p&gt;
 &lt;p&gt;To build this website, I am using github pages, and nikola. You can read more about &lt;a href="https://jiaweizhuang.github.io/blog/nikola-guide/"&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</description><guid>https://example.com/posts/firt-note/</guid><pubDate>Sat, 26 Oct 2019 11:55:35 GMT</pubDate></item></channel></rss>
