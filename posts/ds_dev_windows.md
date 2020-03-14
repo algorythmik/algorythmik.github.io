@@ -1,6 +1,6 @@
 <!--
-.. title: Mirror a repository
-.. slug: mirror-a-repository
+.. title: Setting up a Dev environment on Windowns
+.. slug: Setting up a Dev environment on Windowns
 .. date: 2019-11-11 12:56:43 UTC+01:00
 .. tags:
 .. category:
@@ -54,3 +54,8 @@ If you use Vscode as your editor, you can configure it to use cmder in integrate
     "C:\\tools\\miniconda3",
 ],
 ```
+## Powerline for cmder
+Finally, if you want to add powerline to to customize your prompt, look [here.](https://github.com/AmrEldib/cmder-powerline-prompt)
+
+![cmder conda setup](./figs/cmder_2.png)
+
