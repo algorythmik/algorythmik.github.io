@@ -32,7 +32,7 @@ For python version management and virtual environment managements on linux, I us
 
 ## Cmder integration
 You can setup a task in cmder which would activate the base conda environment when you create a new console. Assume your miniconda is installed in `C:\tools\miniconda3`. On cmder, setup tasks, startup, tasks, add a new predefines tasks and configure it like this:
-![cmder conda setup](./figs/cmder.jpg)
+![cmder conda setup](/images/cmder.jpg)
 
 In the commands you need to put:
 
@@ -57,5 +57,5 @@ If you use Vscode as your editor, you can configure it to use cmder in integrate
 ## Powerline for cmder
 Finally, if you want to add powerline to to customize your prompt, look [here.](https://github.com/AmrEldib/cmder-powerline-prompt)
 
-![cmder conda setup](./figs/cmder_2.png)
+![cmder conda setup](/images/cmder_2.png)
 
