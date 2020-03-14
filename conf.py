@@ -220,15 +220,14 @@ POSTS = (
     ("posts/*.md", "posts", "post.tmpl"),
     ("posts/*.txt", "posts", "post.tmpl"),
     ("posts/*.html", "posts", "post.tmpl"),
-    ("posts/*.ipynb", "blog", "post.tmpl"), # new line
+    ("posts/*.ipynb", "blog", "post.tmpl"), 
 )
 PAGES = (
     ("pages/*.rst", "pages", "page.tmpl"),
     ("pages/*.md", "pages", "page.tmpl"),
     ("pages/*.txt", "pages", "page.tmpl"),
     ("pages/*.html", "pages", "page.tmpl"),
-    ("pages/*.ipynb", "", "page.tmpl"), # new line
-)
+    ("pages/*.ipynb", "", "page.tmpl"),)
 
 
 # Below this point, everything is optional
