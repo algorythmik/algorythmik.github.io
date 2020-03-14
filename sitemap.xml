@@ -7,15 +7,19 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://example.com/</loc>
-  <lastmod>2020-03-14T17:34:00Z</lastmod>
+  <lastmod>2020-03-14T20:54:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/2019/</loc>
   <lastmod>2020-03-14T17:13:00Z</lastmod>
  </url>
  <url>
+  <loc>https://example.com/2020/</loc>
+  <lastmod>2020-03-14T20:54:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://example.com/archive.html</loc>
-  <lastmod>2020-03-14T17:13:00Z</lastmod>
+  <lastmod>2020-03-14T20:54:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/categories/</loc>
@@ -28,5 +32,9 @@
  <url>
   <loc>https://example.com/posts/firt-note/</loc>
   <lastmod>2020-03-14T17:13:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://example.com/posts/monte-carlo-estimation-of-pi/</loc>
+  <lastmod>2020-03-14T20:54:00Z</lastmod>
  </url>
 </urlset>
